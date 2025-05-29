@@ -10,28 +10,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('Buttons In Flutter')),
-        body: Center(
-          child: Column(
-            children: [
-              MaterialButton(
-                onPressed: () {
-                  // Action to perform on button press
-                },
-                color: Colors.green,
-                textColor: Colors.white,
-                child: const Row(
-                  mainAxisSize:
-                      MainAxisSize.min, // Align text and icon closely together
-                  children: <Widget>[
-                    Icon(Icons.add),
-                    SizedBox(width: 8), // Space between icon and text
-                    Text('Add Item'),
-                  ],
-                ),
-              ),
-            ],
+        body: const Center(
+            child: Column(
+              children: [
+                MaterialButton(
+                  onPressed: null,
+                  color: Color.fromARGB(255, 205, 208, 211),
+                  child: Text('Disabled Button'),
+                )
+              ],
+            ),
           ),
-        ),
       ),
     );
   }
