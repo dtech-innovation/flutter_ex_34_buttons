@@ -10,16 +10,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('Buttons In Flutter')),
-        body:Center(
-            child: Column(
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('Press Me'),
-                )
-              ],
-            ),
+        body: Center(
+          child: Column(
+            children: [
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.add),
+                label: Text('Add Item'),
+              ),
+            ],
           ),
+        ),
       ),
     );
   }
