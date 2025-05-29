@@ -14,9 +14,20 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               MaterialButton(
-                onPressed: () {},
-                color: Colors.blue,
-                child: const Text('Press Me'),
+                onPressed: () {
+                  // Action to perform on button press
+                },
+                color: Colors.green,
+                textColor: Colors.white,
+                child: const Row(
+                  mainAxisSize:
+                      MainAxisSize.min, // Align text and icon closely together
+                  children: <Widget>[
+                    Icon(Icons.add),
+                    SizedBox(width: 8), // Space between icon and text
+                    Text('Add Item'),
+                  ],
+                ),
               ),
             ],
           ),
