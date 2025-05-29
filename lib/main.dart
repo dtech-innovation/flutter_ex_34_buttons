@@ -10,13 +10,27 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('Buttons In Flutter')),
-        body: const Center(
+        body:Center(
             child: Column(
               children: [
                 MaterialButton(
-                  onPressed: null,
-                  color: Color.fromARGB(255, 205, 208, 211),
-                  child: Text('Disabled Button'),
+                  onPressed: () {},
+                  child: Ink(
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                          colors: [Colors.blue, Colors.red]),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Container(
+                      constraints:
+                          const BoxConstraints(minWidth: 88.0, minHeight: 36.0),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Gradient Button',
+                        style: TextStyle(color: Colors.white, fontSize: 17),
+                      ),
+                    ),
+                  ),
                 )
               ],
             ),
