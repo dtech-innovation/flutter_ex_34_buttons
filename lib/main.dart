@@ -13,17 +13,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              ElevatedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                ),
-                child: Text('Rounded Corners'),
-              ),
+              ElevatedButton(onPressed: null, child: Text('Disabled Button')),
             ],
           ),
         ),
