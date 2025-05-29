@@ -13,10 +13,13 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              ElevatedButton.icon(
+              ElevatedButton(
                 onPressed: () {},
-                icon: Icon(Icons.add),
-                label: Text('Add Item'),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.green),
+                  textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20)),
+                ),
+                child: Text('Custom Style'),
               ),
             ],
           ),
