@@ -16,10 +16,13 @@ class MyApp extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.green),
-                  textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
                 ),
-                child: Text('Custom Style'),
+                child: Text('Rounded Corners'),
               ),
             ],
           ),
